@@ -1,0 +1,22 @@
+{
+  "name": "Get HAR",
+  "description": "Triggers Chrome to dump the HAR into the page context",
+  "version": "0.1",
+
+  "content_scripts":[{
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["page.js"]
+  }],
+
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "devtools_page": "devtools.html",
+
+  "manifest_version": 2
+}
